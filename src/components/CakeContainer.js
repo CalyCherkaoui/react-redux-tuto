@@ -1,13 +1,14 @@
 import React from 'react'
+import { connect } from 'react-redux'
 // import { buyCake } from '../redux/cake/cakeActions'
 import { buyCake } from '../redux'
 
 
-function CakeContainer() {
+function CakeContainer(props) {
   return (
     <div>
-      <h2>Number of Cakes</h2>
-      <button>By a Cake</button>
+      <h2>Number of Cakes : {props.numOfCakes}</h2>
+      <button onClick={props.buyCake}>By a Cake</button>
     </div>
   )
 }
@@ -24,4 +25,6 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default CakeContainer
+export default connect(mapStateToProps,
+   mapDispatchToProps
+   )(CakeContainer)
