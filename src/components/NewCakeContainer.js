@@ -7,7 +7,7 @@ function NewCakeContainer(props) {
   return (
     <div>
       <hr></hr>
-      <p><em>New Cakes container</em></p>
+      <p><em>New Cakes container (with Action payload)</em></p>
       <h2>Number of cakes : {props.numOfCakes}</h2>
       <input 
         type="text"
