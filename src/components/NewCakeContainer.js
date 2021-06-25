@@ -17,7 +17,7 @@ function NewCakeContainer(props) {
       <button
         onClick={() => props.buyCake(number)}
       >
-        Click to buy those cakes
+        Click to buy {number} Cakes
       </button>
     </div>
   )
